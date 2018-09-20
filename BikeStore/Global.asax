@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="BikeStore.Global_asax" Language="C#" %>
