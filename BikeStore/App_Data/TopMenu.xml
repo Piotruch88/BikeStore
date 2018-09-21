@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <items>
-  <item Text="Home" NavigateUrl="#" />
-  <item Text="Products" NavigateUrl="#"  />
-  <item Text="Downloads" NavigateUrl="#"  />
+  <item Text="Strona główna" NavigateUrl="/Store/HomePage.aspx" />
+  <item Text="Sklep" NavigateUrl="/Store/Products.aspx"  />
   <item Text="Zarządzaj produktami sprzedażowymi" NavigateUrl="/Menage/Products.aspx"  />
 </items>

@@ -1,25 +1,20 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="BikeStore.Menage.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="BikeStore.Store.Products" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
-        <%--        <AnonymousTemplate>
-            <div>
-                Dostęp tylko dla użytkowników z uprawnieniami...
-            </div>
-        </AnonymousTemplate>
-        <LoggedInTemplate>
-            jestes zalgowanym
-        </LoggedInTemplate>--%>
-    </asp:LoginView>
 
-    <dx:ASPxGridView ID="ASPxGridView" runat="server" AutoGenerateColumns="True" DataSourceID="SqlDataSource2" KeyFieldName="Id">
+
+
+
+    <dx:ASPxGridView ID="ASPxGridView" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" KeyFieldName="Id">
         <SettingsAdaptivity>
             <AdaptiveDetailLayoutProperties ColCount="1"></AdaptiveDetailLayoutProperties>
         </SettingsAdaptivity>
 
+        <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
+
         <EditFormLayoutProperties ColCount="1"></EditFormLayoutProperties>
         <Columns>
-            <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButtonInHeader="True" VisibleIndex="0">
+            <dx:GridViewCommandColumn VisibleIndex="0">
             </dx:GridViewCommandColumn>
             <dx:GridViewDataTextColumn FieldName="Id" ReadOnly="True" VisibleIndex="1">
                 <EditFormSettings Visible="False" />
@@ -39,10 +34,10 @@
         </Columns>
     </dx:ASPxGridView>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>"
-        SelectCommand="SELECT [Id], [Name], [Producer], [URLToPhoto], [Price], [Description], [ProductType] FROM [Products]"
-        DeleteCommand="DELETE FROM [Products] WHERE Id=@Id"
-        InsertCommand="INSERT INTO [Products] ([Name], [Producer], [URLToPhoto], [Price], [Description], [ProductType]) VALUES (@name, @Producer, @URLToPhoto, @Price, @Description, @ProductType)"></asp:SqlDataSource>
+        SelectCommand="SELECT [Id], [Name], [Producer], [URLToPhoto], [Price], [Description], [ProductType] FROM [Products]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
 
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
+
+
 </asp:Content>

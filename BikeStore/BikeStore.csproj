@@ -171,6 +171,8 @@
     <Content Include="Account\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Store\HomePage.aspx" />
+    <Content Include="Store\Products.aspx" />
     <Content Include="Web.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -350,6 +352,20 @@
       <DependentUpon>Root.master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Store\HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Store\HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Store\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Store\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201809210909550_first.resx">
@@ -357,9 +373,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Store\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
