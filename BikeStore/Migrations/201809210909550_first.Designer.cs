@@ -13,7 +13,7 @@ namespace BikeStore.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201809210907150_first"; }
+            get { return "201809210909550_first"; }
         }
         
         string IMigrationMetadata.Source

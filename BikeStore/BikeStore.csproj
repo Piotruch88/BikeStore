@@ -156,7 +156,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Menage\AddingNewProduct.aspx" />
+    <Content Include="Menage\Products.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Light.master" />
@@ -326,16 +326,16 @@
     <Compile Include="Main.master.designer.cs">
       <DependentUpon>Main.master</DependentUpon>
     </Compile>
-    <Compile Include="Menage\AddingNewProduct.aspx.cs">
-      <DependentUpon>AddingNewProduct.aspx</DependentUpon>
+    <Compile Include="Menage\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Menage\AddingNewProduct.aspx.designer.cs">
-      <DependentUpon>AddingNewProduct.aspx</DependentUpon>
+    <Compile Include="Menage\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201809210907150_first.cs" />
-    <Compile Include="Migrations\201809210907150_first.Designer.cs">
-      <DependentUpon>201809210907150_first.cs</DependentUpon>
+    <Compile Include="Migrations\201809210909550_first.cs" />
+    <Compile Include="Migrations\201809210909550_first.Designer.cs">
+      <DependentUpon>201809210909550_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -352,8 +352,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201809210907150_first.resx">
-      <DependentUpon>201809210907150_first.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809210909550_first.resx">
+      <DependentUpon>201809210909550_first.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
