@@ -3,5 +3,5 @@
   <item Text="Home" NavigateUrl="#" />
   <item Text="Products" NavigateUrl="#"  />
   <item Text="Downloads" NavigateUrl="#"  />
-  <item Text="Support" NavigateUrl="#"  />
+  <item Text="Dodaj nowy produkt do sklepu" NavigateUrl="/Menage/AddingNewProduct.aspx"  />
 </items>

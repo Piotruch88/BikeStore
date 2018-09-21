@@ -7,13 +7,13 @@ namespace BikeStore.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class pierwsza : IMigrationMetadata
+    public sealed partial class first : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(pierwsza));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(first));
         
         string IMigrationMetadata.Id
         {
-            get { return "201809201047331_pierwsza"; }
+            get { return "201809210907150_first"; }
         }
         
         string IMigrationMetadata.Source

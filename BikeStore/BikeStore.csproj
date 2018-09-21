@@ -44,6 +44,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Web.Resources.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -137,6 +138,10 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="App_Data\aspnetdb.mdf" />
+    <Content Include="App_Data\aspnetdb_log.ldf">
+      <DependentUpon>aspnetdb.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\NWind.mdf" />
     <Content Include="App_Data\NWind_log.ldf">
       <DependentUpon>NWind.mdf</DependentUpon>
@@ -151,7 +156,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Store\Parts.aspx" />
+    <Content Include="Menage\AddingNewProduct.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Light.master" />
@@ -321,12 +326,21 @@
     <Compile Include="Main.master.designer.cs">
       <DependentUpon>Main.master</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201809201047331_pierwsza.cs" />
-    <Compile Include="Migrations\201809201047331_pierwsza.Designer.cs">
-      <DependentUpon>201809201047331_pierwsza.cs</DependentUpon>
+    <Compile Include="Menage\AddingNewProduct.aspx.cs">
+      <DependentUpon>AddingNewProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menage\AddingNewProduct.aspx.designer.cs">
+      <DependentUpon>AddingNewProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210907150_first.cs" />
+    <Compile Include="Migrations\201809210907150_first.Designer.cs">
+      <DependentUpon>201809210907150_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Root.master.cs">
       <DependentUpon>Root.master</DependentUpon>
@@ -336,18 +350,15 @@
       <DependentUpon>Root.master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="Store\Parts.aspx.cs">
-      <DependentUpon>Parts.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Store\Parts.aspx.designer.cs">
-      <DependentUpon>Parts.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201809201047331_pierwsza.resx">
-      <DependentUpon>201809201047331_pierwsza.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809210907150_first.resx">
+      <DependentUpon>201809210907150_first.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Store\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
