@@ -31,6 +31,10 @@
             </dx:GridViewDataTextColumn>
             <dx:GridViewDataTextColumn FieldName="ProductType" VisibleIndex="7">
             </dx:GridViewDataTextColumn>
+            <dx:GridViewDataCheckColumn Caption="Włóż do koszyka" Name="Basket" VisibleIndex="8">
+                <PropertiesCheckEdit DisplayTextChecked="W koszyku" DisplayTextUnchecked="nie wybrano">
+                </PropertiesCheckEdit>
+            </dx:GridViewDataCheckColumn>
         </Columns>
     </dx:ASPxGridView>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>"
