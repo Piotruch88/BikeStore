@@ -1,11 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="BikeStore.Store.Products" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
-
-
-
-    <dx:ASPxGridView ID="ASPxGridView" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" KeyFieldName="Id">
+    <dx:ASPxGridView ID="ASPxGridView" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2"
+        KeyFieldName="Id">
         <SettingsAdaptivity>
             <AdaptiveDetailLayoutProperties ColCount="1"></AdaptiveDetailLayoutProperties>
         </SettingsAdaptivity>
@@ -31,17 +28,19 @@
             </dx:GridViewDataTextColumn>
             <dx:GridViewDataTextColumn FieldName="ProductType" VisibleIndex="7">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataCheckColumn Caption="Włóż do koszyka" Name="Basket" VisibleIndex="8">
-                <PropertiesCheckEdit DisplayTextChecked="W koszyku" DisplayTextUnchecked="nie wybrano">
-                </PropertiesCheckEdit>
-            </dx:GridViewDataCheckColumn>
+            <dx:GridViewCommandColumn Caption="test test" ShowInCustomizationForm="True" ShowSelectCheckbox="True" VisibleIndex="9">
+            </dx:GridViewCommandColumn>
         </Columns>
+
+
     </dx:ASPxGridView>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>"
         SelectCommand="SELECT [Id], [Name], [Producer], [URLToPhoto], [Price], [Description], [ProductType] FROM [Products]"></asp:SqlDataSource>
+        
     <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
 
 
 
+    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
 
 </asp:Content>

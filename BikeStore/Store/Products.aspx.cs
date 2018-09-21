@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace BikeStore.Store
 {
@@ -11,7 +6,13 @@ namespace BikeStore.Store
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            var products = ASPxGridView.GetSelectedFieldValues("Id");
+            var test = products[0].ToString();
         }
     }
 }
