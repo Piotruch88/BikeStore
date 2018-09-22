@@ -4,7 +4,7 @@ using Microsoft.AspNet.Identity;
 using System;
 using System.Linq;
 
-namespace BikeStore.Menage
+namespace BikeStore.Store
 {
     public partial class ManageProducts : System.Web.UI.Page
     {

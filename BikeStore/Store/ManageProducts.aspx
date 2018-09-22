@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="ManageProducts.aspx.cs" Inherits="BikeStore.Menage.ManageProducts" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="ManageProducts.aspx.cs" Inherits="BikeStore.Store.ManageProducts" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">

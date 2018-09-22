@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BikeStore.Menage {
+namespace BikeStore.Store {
     
     
     public partial class ManageProducts {

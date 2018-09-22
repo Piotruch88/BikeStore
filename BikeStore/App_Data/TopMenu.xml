@@ -2,5 +2,6 @@
 <items>
   <item Text="Strona główna" NavigateUrl="/Default.aspx" />
   <item Text="Sklep" NavigateUrl="/Store/Products.aspx"  />
-  <item Text="Zarządzaj produktami sprzedażowymi" NavigateUrl="/Store/MenageProducts.aspx"  />
+  <item Text="Koszyk" NavigateUrl="/Store/ManageBasket.aspx"  />
+  <item Text="Zarządzaj produktami sprzedażowymi" NavigateUrl="/Store/ManageProducts.aspx"  />
 </items>

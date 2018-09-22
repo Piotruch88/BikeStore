@@ -30,8 +30,8 @@ namespace BikeStore.Store
 
             string currentUserId = User.Identity.GetUserId();
 
-            var cart = new ShoppingBasket(Session, currentUserId);
-            cart.AddProducts(selectedProducts);
+            var basket = new ShoppingBasket(Session, currentUserId);
+            basket.AddProducts(selectedProducts);
         }
     }
 }

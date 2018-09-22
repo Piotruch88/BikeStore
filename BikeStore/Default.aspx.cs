@@ -10,8 +10,8 @@ using System.Web.UI.WebControls;
 namespace BikeStore {
     public partial class _Default : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
-            var cart = new ShoppingBasket(Session, User.Identity.GetUserId());
-            var list = cart.GetList();
+            var basket = new ShoppingBasket(Session, User.Identity.GetUserId());
+            var list = basket.GetList();
         }
         
     }
