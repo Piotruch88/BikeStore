@@ -10,23 +10,27 @@ namespace BikeStore.Store
 {
     public partial class Products : System.Web.UI.Page
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private ApplicationDbContext _db = new ApplicationDbContext();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            var helper = new UserPermissionHelper(User.Identity);
+            if (helper.UserIsLogged == false)
+            {
+                Response.Redirect("/Account/Login.aspx");
+            }            
         }
 
         protected void BtnAddToShoppingCart_Click(object sender, EventArgs e)
         {
             var selctedIds = ASPxGridView.GetSelectedFieldValues("Id").Cast<int>().ToList();
-            var selectedProducts = (from d in db.Products
+            var selectedProducts = (from d in _db.Products
                                     where selctedIds.Contains(d.Id)
                                     select d).ToList();
 
             string currentUserId = User.Identity.GetUserId();
 
-            var cart = new ShoppingCart(Session, currentUserId);
+            var cart = new ShoppingBasket(Session, currentUserId);
             cart.AddProducts(selectedProducts);
         }
     }

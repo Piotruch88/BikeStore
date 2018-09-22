@@ -5,13 +5,13 @@ using System.Web.SessionState;
 namespace BikeStore.Menage
 {
 
-    public class ShoppingCart
+    public class ShoppingBasket
     {
         private HttpSessionState _session;
         private string _userId;
         private List<Product> Products { get; set; }
         
-        public ShoppingCart(HttpSessionState session, string userId)
+        public ShoppingBasket(HttpSessionState session, string userId)
         {
             _session = session;
             _userId = userId;

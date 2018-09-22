@@ -1,46 +1,21 @@
 ﻿using BikeStore.Models;
+using BikeStore.Store;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Linq;
 
 namespace BikeStore.Menage
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class MenageProducts : System.Web.UI.Page
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
-
-        private void NoPermission()
-        {
-            ASPxGridView.Visible = false;
-            Label1.Text = "Nie posiadasz uprawnień do tej strony";
-        }
-
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            string currentUserId = User.Identity.GetUserId();
+            var helper = new UserPermissionHelper(User.Identity);
 
-            if (!String.IsNullOrEmpty(currentUserId))
+            if (helper.UserHasAdminMode == false)
             {
-                ApplicationUser currentUser = db.Users.FirstOrDefault(x => x.Id == currentUserId);
-
-                if (currentUser.AdminMode)
-                {
-                    ASPxGridView.Visible = true;
-                    Label1.Visible = false;
-                }
-                else
-                    NoPermission();
+                Response.Redirect("/Store/NoPermission.aspx");
             }
-            else
-                NoPermission();
-
-            //Context.User.Identity.GetUserId();
-        }
-
-        protected void ASPxGridView_Init(object sender, EventArgs e)
-        {
-
-        }
+        }     
     }
 }

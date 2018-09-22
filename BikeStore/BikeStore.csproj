@@ -167,6 +167,7 @@
     <Content Include="Account\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Store\NoPermission.aspx" />
     <Content Include="Store\Products.aspx" />
     <Content Include="Web.config" />
     <None Include="packages.config" />
@@ -330,7 +331,15 @@
     <Compile Include="Store\MenageProducts.aspx.designer.cs">
       <DependentUpon>MenageProducts.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Store\ShoppingCart.cs" />
+    <Compile Include="Store\NoPermission.aspx.cs">
+      <DependentUpon>NoPermission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Store\NoPermission.aspx.designer.cs">
+      <DependentUpon>NoPermission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Store\UserPermissionHelper.cs" />
+    <Compile Include="Store\ShoppingBasket.cs" />
     <Compile Include="Migrations\201809210909550_first.cs" />
     <Compile Include="Migrations\201809210909550_first.Designer.cs">
       <DependentUpon>201809210909550_first.cs</DependentUpon>
