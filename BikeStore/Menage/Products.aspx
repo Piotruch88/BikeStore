@@ -12,7 +12,7 @@
         </LoggedInTemplate>--%>
     </asp:LoginView>
 
-    <dx:ASPxGridView ID="ASPxGridView" runat="server" AutoGenerateColumns="True" DataSourceID="SqlDataSource2" KeyFieldName="Id">
+    <dx:ASPxGridView ID="ASPxGridView" runat="server" AutoGenerateColumns="True" DataSourceID="SqlDataSource2" KeyFieldName="Id" OnInit="ASPxGridView_Init">
         <SettingsAdaptivity>
             <AdaptiveDetailLayoutProperties ColCount="1"></AdaptiveDetailLayoutProperties>
         </SettingsAdaptivity>

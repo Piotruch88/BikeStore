@@ -37,5 +37,10 @@ namespace BikeStore.Menage
 
             //Context.User.Identity.GetUserId();
         }
+
+        protected void ASPxGridView_Init(object sender, EventArgs e)
+        {
+
+        }
     }
 }

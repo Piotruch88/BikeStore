@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BikeStore.Menage;
+using System;
 
 namespace BikeStore.Store
 {
@@ -12,7 +13,10 @@ namespace BikeStore.Store
         protected void Button1_Click(object sender, EventArgs e)
         {
             var products = ASPxGridView.GetSelectedFieldValues("Id");
+            var cart = new ShoppingCart(Session);
+           // Context.User
             var test = products[0].ToString();
+            cart.AddProduct(new Product() { Id = test.ToString(), ProductName = "Prod" + test });
         }
     }
 }

@@ -335,6 +335,7 @@
     <Compile Include="Menage\Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Menage\ShoppingCart.cs" />
     <Compile Include="Migrations\201809210909550_first.cs" />
     <Compile Include="Migrations\201809210909550_first.Designer.cs">
       <DependentUpon>201809210909550_first.cs</DependentUpon>
