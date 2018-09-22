@@ -142,10 +142,6 @@
     <Content Include="App_Data\aspnetdb_log.ldf">
       <DependentUpon>aspnetdb.mdf</DependentUpon>
     </Content>
-    <Content Include="App_Data\NWind.mdf" />
-    <Content Include="App_Data\NWind_log.ldf">
-      <DependentUpon>NWind.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\SideMenu.xml" />
     <Content Include="App_Data\TopMenu.xml" />
     <Content Include="Content\Images\AquaHeader.jpg" />
@@ -156,7 +152,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Menage\Products.aspx" />
+    <Content Include="Store\MenageProducts.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Light.master" />
@@ -171,7 +167,6 @@
     <Content Include="Account\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Store\HomePage.aspx" />
     <Content Include="Store\Products.aspx" />
     <Content Include="Web.config" />
     <None Include="packages.config" />
@@ -328,14 +323,14 @@
     <Compile Include="Main.master.designer.cs">
       <DependentUpon>Main.master</DependentUpon>
     </Compile>
-    <Compile Include="Menage\Products.aspx.cs">
-      <DependentUpon>Products.aspx</DependentUpon>
+    <Compile Include="Store\MenageProducts.aspx.cs">
+      <DependentUpon>MenageProducts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Menage\Products.aspx.designer.cs">
-      <DependentUpon>Products.aspx</DependentUpon>
+    <Compile Include="Store\MenageProducts.aspx.designer.cs">
+      <DependentUpon>MenageProducts.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Menage\ShoppingCart.cs" />
+    <Compile Include="Store\ShoppingCart.cs" />
     <Compile Include="Migrations\201809210909550_first.cs" />
     <Compile Include="Migrations\201809210909550_first.Designer.cs">
       <DependentUpon>201809210909550_first.cs</DependentUpon>
@@ -353,13 +348,6 @@
       <DependentUpon>Root.master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="Store\HomePage.aspx.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Store\HomePage.aspx.designer.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Store\Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

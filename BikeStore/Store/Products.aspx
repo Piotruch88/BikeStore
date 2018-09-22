@@ -41,6 +41,6 @@
 
 
 
-    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+    <asp:Button ID="BtnAddToShoppingCart" runat="server" Text="Dodaj do koszyka" OnClick="Button1_Click" />
 
 </asp:Content>
