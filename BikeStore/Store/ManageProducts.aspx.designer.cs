@@ -10,7 +10,7 @@
 namespace BikeStore.Menage {
     
     
-    public partial class MenageProducts {
+    public partial class ManageProducts {
         
         /// <summary>
         /// HeadLoginView control.

@@ -8,8 +8,7 @@ namespace BikeStore.Menage
     public class ShoppingBasket
     {
         private HttpSessionState _session;
-        private string _userId;
-        private List<Product> Products { get; set; }
+        private string _userId;        
         
         public ShoppingBasket(HttpSessionState session, string userId)
         {
@@ -25,6 +24,11 @@ namespace BikeStore.Menage
         public List<Product> GetList()
         {
             return (List<Product>)_session[_userId];
+        }
+        
+        public void Clear()
+        {
+            _session [_userId] = null;
         }
 
     }

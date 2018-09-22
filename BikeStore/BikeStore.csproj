@@ -152,7 +152,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Store\MenageProducts.aspx" />
+    <Content Include="Store\ManageBasket.aspx" />
+    <Content Include="Store\ManageProducts.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Light.master" />
@@ -324,12 +325,19 @@
     <Compile Include="Main.master.designer.cs">
       <DependentUpon>Main.master</DependentUpon>
     </Compile>
-    <Compile Include="Store\MenageProducts.aspx.cs">
-      <DependentUpon>MenageProducts.aspx</DependentUpon>
+    <Compile Include="Store\ManageBasket.aspx.cs">
+      <DependentUpon>ManageBasket.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Store\MenageProducts.aspx.designer.cs">
-      <DependentUpon>MenageProducts.aspx</DependentUpon>
+    <Compile Include="Store\ManageBasket.aspx.designer.cs">
+      <DependentUpon>ManageBasket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Store\ManageProducts.aspx.cs">
+      <DependentUpon>ManageProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Store\ManageProducts.aspx.designer.cs">
+      <DependentUpon>ManageProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Store\NoPermission.aspx.cs">
       <DependentUpon>NoPermission.aspx</DependentUpon>
