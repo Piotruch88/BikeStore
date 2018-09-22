@@ -1,41 +1,30 @@
-﻿using System;
+﻿using BikeStore.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.SessionState;
 
 namespace BikeStore.Menage
 {
-    public class Product
-    {
-        public string Id { get; set; }
-        public string ProductName { get; set; }
-    }
+
     public class ShoppingCart
     {
-        HttpSessionState _session;
-        public ShoppingCart(HttpSessionState session)
+        private HttpSessionState _session;
+        private string _userId;
+        private List<Product> Products { get; set; }
+        
+        public ShoppingCart(HttpSessionState session, string userId)
         {
-            this._session = session;
+            _session = session;
+            _userId = userId;
         }
-        public string Id = "Piotrek";
-        public List<Product> Products { get; set; }
-        public void AddProduct(Product product)
+        
+        public void AddProducts(List<Product> products)
         {
-            List<Product> Products = (List<Product>)this._session[this.Id];
-            if (Products != null)
-            {
-                Products.Add(product);
-            }
-            else
-            {
-                Products = new List<Product>();
-            }
-            this._session[this.Id] = Products;
+            _session[_userId] = products;
         }
+        
         public List<Product> GetList()
         {
-            return (List<Product>)this._session[this.Id];
+            return (List<Product>)_session[_userId];
         }
 
     }
