@@ -41,6 +41,7 @@
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>"
         SelectCommand="SELECT [Id], [Name], [Producer], [URLToPhoto], [Price], [Description], [ProductType] FROM [Products]"
         DeleteCommand="DELETE FROM [Products] WHERE Id=@Id"
+        UpdateCommand="UPDATE [Products] SET [Name]=@Name, [Producer]=@Producer, [URLToPhoto]=@URLToPhoto, [Price]=@Price, [Description]=@Description, [ProductType]=@ProductType WHERE Id=@Id"
         InsertCommand="INSERT INTO [Products] ([Name], [Producer], [URLToPhoto], [Price], [Description], [ProductType]) VALUES (@name, @Producer, @URLToPhoto, @Price, @Description, @ProductType)"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
 
