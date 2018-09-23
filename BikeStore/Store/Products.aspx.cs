@@ -32,6 +32,8 @@ namespace BikeStore.Store
 
             var basket = new ShoppingBasket(Session, currentUserId);
             basket.AddProducts(selectedProducts);
+
+            Response.Redirect("/Store/ManageBasket.aspx");
         }
     }
 }

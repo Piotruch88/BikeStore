@@ -43,7 +43,23 @@ namespace BikeStore.Menage
         {
             return (List<Product>)_session[_userId];
         }
-        
+
+        public List<Product> RemoveProduct(int Id)
+        {
+            var newBasketList = new List<Product>();
+
+            foreach (var oldRec in GetList())
+            {
+                if (Id != oldRec.Id)
+                    newBasketList.Add(oldRec);
+            }
+
+            Clear();
+            AddProducts(newBasketList);
+
+            return GetList();
+        }
+
         public void Clear()
         {
             _session [_userId] = null;

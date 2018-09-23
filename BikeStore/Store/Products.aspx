@@ -11,8 +11,6 @@
 
         <EditFormLayoutProperties ColCount="1"></EditFormLayoutProperties>
         <Columns>
-            <dx:GridViewCommandColumn VisibleIndex="0">
-            </dx:GridViewCommandColumn>
             <dx:GridViewDataTextColumn FieldName="Id" ReadOnly="True" VisibleIndex="1">
                 <EditFormSettings Visible="False" />
             </dx:GridViewDataTextColumn>
@@ -28,7 +26,7 @@
             </dx:GridViewDataTextColumn>
             <dx:GridViewDataTextColumn FieldName="ProductType" VisibleIndex="7">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewCommandColumn Caption="test test" ShowInCustomizationForm="True" ShowSelectCheckbox="True" VisibleIndex="9">
+            <dx:GridViewCommandColumn ShowInCustomizationForm="True" ShowSelectCheckbox="True" VisibleIndex="9">
             </dx:GridViewCommandColumn>
         </Columns>
 

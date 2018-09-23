@@ -3,37 +3,41 @@ using BikeStore.Models;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
-using System.Data;
+using System.Linq;
 
 namespace BikeStore.Store
 {
     public partial class ManageBasket : System.Web.UI.Page
     {
-        public List<Product> _basketGridPresenter;
-
         protected void Page_Load(object sender, EventArgs e)
+        { 
+        }
+
+        public List<Product> GetBasket()
         {
-            //_basketGridPresenter = new ShoppingBasket(Session, User.Identity.GetUserId()).GetList();
+            var basket = new ShoppingBasket(Session, User.Identity.GetUserId());
+
+            if (basket != null)
+            {
+                return basket.GetList();
+            }
+            else
+            {
+                return null;
+            }
         }
-        
-        public DataSet LoadToGrid()
+
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            _basketGridPresenter = new ShoppingBasket(Session, User.Identity.GetUserId()).GetList();
+            var basket = new ShoppingBasket(Session, User.Identity.GetUserId());
+            var selctedIds = ASPxGridView.GetSelectedFieldValues("Id").Cast<int>().ToList();
 
-            var test = new DataSet();
+            foreach (var selId in selctedIds)
+            {
+                basket.RemoveProduct(selId);
+            }
 
-            return test;
+            Response.Redirect(Request.RawUrl);
         }
-
-        public List<int> LoadCzyToSiePOkaze()
-        {           
-            var test = new List<int>();
-            test.Add(23);
-            test.Add(23);
-
-            return test;
-        }
-
-
     }
 }
