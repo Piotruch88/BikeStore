@@ -39,7 +39,7 @@ namespace BikeStore.Menage
             return basket;
         }
 
-        public List<Product> GetList()
+        public List<Product> GetProductList()
         {
             return (List<Product>)_session[_userId];
         }
@@ -48,7 +48,7 @@ namespace BikeStore.Menage
         {
             var newBasketList = new List<Product>();
 
-            foreach (var oldRec in GetList())
+            foreach (var oldRec in GetProductList())
             {
                 if (Id != oldRec.Id)
                     newBasketList.Add(oldRec);
@@ -57,12 +57,28 @@ namespace BikeStore.Menage
             Clear();
             AddProducts(newBasketList);
 
-            return GetList();
+            return GetProductList();
         }
 
         public void Clear()
         {
             _session [_userId] = null;
+        }
+
+        public decimal GetTotalCost()
+        {
+            decimal result = 0;
+            var productList = GetProductList();
+
+            if (productList != null)
+            {
+                foreach (var product in productList)
+                {
+                    result = result + product.Price;
+                }
+            }
+
+            return result;
         }
     }
 }

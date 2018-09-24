@@ -19,7 +19,7 @@ namespace BikeStore.Store
 
             if (basket != null)
             {
-                return basket.GetList();
+                return basket.GetProductList();
             }
             else
             {
@@ -42,7 +42,7 @@ namespace BikeStore.Store
 
         protected void BtnOrder_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("/Store/OrderSummary.aspx");
         }
     }
 }

@@ -169,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Store\NoPermission.aspx" />
+    <Content Include="Store\OrderSummary.aspx" />
     <Content Include="Store\Products.aspx" />
     <Content Include="Web.config" />
     <None Include="packages.config" />
@@ -346,6 +347,13 @@
     </Compile>
     <Compile Include="Store\NoPermission.aspx.designer.cs">
       <DependentUpon>NoPermission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Store\OrderSummary.aspx.cs">
+      <DependentUpon>OrderSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Store\OrderSummary.aspx.designer.cs">
+      <DependentUpon>OrderSummary.aspx</DependentUpon>
     </Compile>
     <Compile Include="Store\UserPermissionHelper.cs" />
     <Compile Include="Store\ShoppingBasket.cs" />
