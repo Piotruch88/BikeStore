@@ -18,5 +18,8 @@ namespace BikeStore.Models
         
         [Display(Name = "Adres do wysyłki zamówienia")]
         public string Addres { get; set; }
+
+        [Required]
+        public Guid Guid { get; set; }
     }
 }

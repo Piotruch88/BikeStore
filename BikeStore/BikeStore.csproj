@@ -169,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Store\NoPermission.aspx" />
+    <Content Include="Store\Orders.aspx" />
     <Content Include="Store\OrderSummary.aspx" />
     <Content Include="Store\Products.aspx" />
     <Content Include="Web.config" />
@@ -326,6 +327,22 @@
     <Compile Include="Main.master.designer.cs">
       <DependentUpon>Main.master</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809240823220_orders_products_order.cs" />
+    <Compile Include="Migrations\201809240823220_orders_products_order.Designer.cs">
+      <DependentUpon>201809240823220_orders_products_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809240838299_guid.cs" />
+    <Compile Include="Migrations\201809240838299_guid.Designer.cs">
+      <DependentUpon>201809240838299_guid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809240845382_delete orderID.cs" />
+    <Compile Include="Migrations\201809240845382_delete orderID.Designer.cs">
+      <DependentUpon>201809240845382_delete orderID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809240846297_guidProductOrder.cs" />
+    <Compile Include="Migrations\201809240846297_guidProductOrder.Designer.cs">
+      <DependentUpon>201809240846297_guidProductOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ProductOrder.cs" />
     <Compile Include="Store\ManageBasket.aspx.cs">
       <DependentUpon>ManageBasket.aspx</DependentUpon>
@@ -347,6 +364,13 @@
     </Compile>
     <Compile Include="Store\NoPermission.aspx.designer.cs">
       <DependentUpon>NoPermission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Store\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Store\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
     <Compile Include="Store\OrderSummary.aspx.cs">
       <DependentUpon>OrderSummary.aspx</DependentUpon>
@@ -385,6 +409,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201809210909550_first.resx">
       <DependentUpon>201809210909550_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809240823220_orders_products_order.resx">
+      <DependentUpon>201809240823220_orders_products_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809240838299_guid.resx">
+      <DependentUpon>201809240838299_guid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809240845382_delete orderID.resx">
+      <DependentUpon>201809240845382_delete orderID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809240846297_guidProductOrder.resx">
+      <DependentUpon>201809240846297_guidProductOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
