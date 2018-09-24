@@ -39,5 +39,10 @@ namespace BikeStore.Store
 
             Response.Redirect(Request.RawUrl);
         }
+
+        protected void BtnOrder_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

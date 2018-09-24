@@ -26,4 +26,5 @@
     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetBasket" TypeName="BikeStore.Store.ManageBasket"></asp:ObjectDataSource>
 
 <asp:Button ID="Button1" runat="server" Text="Usuń z koszyka" OnClick="Button1_Click" />
+<asp:Button ID="btnOrder" runat="server" Text="Złóż zamówienie" OnClick="BtnOrder_Click" />
 </asp:Content>
