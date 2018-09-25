@@ -12,13 +12,18 @@ namespace BikeStore.Store
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
 
-        protected void Page_Load(object sender, EventArgs e)
+        private void CheckUserPermission()
         {
             var helper = new UserPermissionHelper(User.Identity);
             if (helper.UserIsLogged == false)
             {
                 Response.Redirect("/Account/Login.aspx");
-            }            
+            }
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            CheckUserPermission();
         }
 
         protected void BtnAddToShoppingCart_Click(object sender, EventArgs e)

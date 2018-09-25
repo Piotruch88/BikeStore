@@ -14,8 +14,18 @@ namespace BikeStore.Store
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
 
+        private void CheckUserPermission()
+        {
+            var helper = new UserPermissionHelper(User.Identity);
+            if (helper.UserIsLogged == false)
+            {
+                Response.Redirect("/Account/Login.aspx");
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            CheckUserPermission();
             var basket = new ShoppingBasket(Session, User.Identity.GetUserId());
             Label.Text = "Wartość Twojego zamówienia wynosi: " + basket.GetTotalCost().ToString();
         }

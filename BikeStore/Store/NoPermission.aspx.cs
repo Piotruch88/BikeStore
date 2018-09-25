@@ -1,17 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace BikeStore.Store
 {
     public partial class NoPermission : System.Web.UI.Page
     {
+        private void CheckUserPermission()
+        {
+            var helper = new UserPermissionHelper(User.Identity);
+            if (helper.UserIsLogged == false)
+            {
+                Response.Redirect("/Account/Login.aspx");
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            CheckUserPermission();
         }
     }
 }
