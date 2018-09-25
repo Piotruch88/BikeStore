@@ -27,4 +27,5 @@
 
 <asp:Button ID="Button1" runat="server" Text="Usuń z koszyka" OnClick="Button1_Click" />
 <asp:Button ID="btnOrder" runat="server" Text="Złóż zamówienie" OnClick="BtnOrder_Click" />
+<asp:Label ID="LabelPrice" runat="server" Text="Label" Font-Size="Medium"></asp:Label>
 </asp:Content>

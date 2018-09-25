@@ -24,8 +24,6 @@
             </dx:GridViewDataTextColumn>
             <dx:GridViewDataTextColumn FieldName="Description" VisibleIndex="6">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="ProductType" VisibleIndex="7">
-            </dx:GridViewDataTextColumn>
             <dx:GridViewCommandColumn ShowInCustomizationForm="True" ShowSelectCheckbox="True" VisibleIndex="9">
             </dx:GridViewCommandColumn>
         </Columns>
@@ -33,7 +31,7 @@
 
     </dx:ASPxGridView>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>"
-        SelectCommand="SELECT [Id], [Name], [Producer], [URLToPhoto], [Price], [Description], [ProductType] FROM [Products]"></asp:SqlDataSource>
+        SelectCommand="SELECT [Id], [Name], [Producer], [URLToPhoto], [Price], [Description] FROM [Products]"></asp:SqlDataSource>
         
     <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
 

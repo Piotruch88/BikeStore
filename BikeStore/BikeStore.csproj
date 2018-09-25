@@ -344,6 +344,14 @@
     <Compile Include="Migrations\201809240846297_guidProductOrder.Designer.cs">
       <DependentUpon>201809240846297_guidProductOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809250918537_Delete_ProductType.cs" />
+    <Compile Include="Migrations\201809250918537_Delete_ProductType.Designer.cs">
+      <DependentUpon>201809250918537_Delete_ProductType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809250943093_Price_to_order.cs" />
+    <Compile Include="Migrations\201809250943093_Price_to_order.Designer.cs">
+      <DependentUpon>201809250943093_Price_to_order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ProductOrder.cs" />
     <Compile Include="Store\ManageBasket.aspx.cs">
       <DependentUpon>ManageBasket.aspx</DependentUpon>
@@ -429,6 +437,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809240846297_guidProductOrder.resx">
       <DependentUpon>201809240846297_guidProductOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809250918537_Delete_ProductType.resx">
+      <DependentUpon>201809250918537_Delete_ProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809250943093_Price_to_order.resx">
+      <DependentUpon>201809250943093_Price_to_order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>

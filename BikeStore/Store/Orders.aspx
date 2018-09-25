@@ -16,6 +16,8 @@
             </dx:GridViewDataDateColumn>
             <dx:GridViewDataTextColumn FieldName="Addres" VisibleIndex="2">
             </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="Price" VisibleIndex="3">
+            </dx:GridViewDataTextColumn>
             <dx:GridViewCommandColumn VisibleIndex="3">
                 <CustomButtons>
                     <dx:GridViewCommandColumnCustomButton Text="Pokaż szczegóły zmówienia">
@@ -25,6 +27,6 @@
         </Columns>
     </dx:ASPxGridView>
 
-    <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" SelectCommand="SELECT [Id], [TimeCreate], [Addres] FROM [Orders]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" SelectCommand="SELECT [Id], [TimeCreate], [Addres], [Price] FROM [Orders]"></asp:SqlDataSource>
 
 </asp:Content>

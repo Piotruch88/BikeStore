@@ -34,15 +34,13 @@
             </dx:GridViewDataTextColumn>
             <dx:GridViewDataTextColumn FieldName="Description" VisibleIndex="6">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="ProductType" VisibleIndex="7">
-            </dx:GridViewDataTextColumn>
         </Columns>
     </dx:ASPxGridView>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>"
-        SelectCommand="SELECT [Id], [Name], [Producer], [URLToPhoto], [Price], [Description], [ProductType] FROM [Products]"
+        SelectCommand="SELECT [Id], [Name], [Producer], [URLToPhoto], [Price], [Description] FROM [Products]"
         DeleteCommand="DELETE FROM [Products] WHERE Id=@Id"
-        UpdateCommand="UPDATE [Products] SET [Name]=@Name, [Producer]=@Producer, [URLToPhoto]=@URLToPhoto, [Price]=@Price, [Description]=@Description, [ProductType]=@ProductType WHERE Id=@Id"
-        InsertCommand="INSERT INTO [Products] ([Name], [Producer], [URLToPhoto], [Price], [Description], [ProductType]) VALUES (@name, @Producer, @URLToPhoto, @Price, @Description, @ProductType)"></asp:SqlDataSource>
+        UpdateCommand="UPDATE [Products] SET [Name]=@Name, [Producer]=@Producer, [URLToPhoto]=@URLToPhoto, [Price]=@Price, [Description]=@Description WHERE Id=@Id"
+        InsertCommand="INSERT INTO [Products] ([Name], [Producer], [URLToPhoto], [Price], [Description]) VALUES (@name, @Producer, @URLToPhoto, @Price, @Description)"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
 
     </asp:Content>

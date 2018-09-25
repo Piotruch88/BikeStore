@@ -18,16 +18,16 @@
             </dx:GridViewDataTextColumn>
             <dx:GridViewDataTextColumn FieldName="Description" VisibleIndex="3">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="ProductType" VisibleIndex="4">
-            </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="Id" ReadOnly="True" VisibleIndex="5">
+            <dx:GridViewDataTextColumn FieldName="Id" ReadOnly="True" VisibleIndex="4">
                 <EditFormSettings Visible="False" />
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="Producer" VisibleIndex="6">
+            <dx:GridViewDataTextColumn FieldName="Producer" VisibleIndex="5">
             </dx:GridViewDataTextColumn>
         </Columns>
     </dx:ASPxGridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" SelectCommand="SELECT [Name], [URLToPhoto], [Price], [Description], [ProductType], [Id], [Producer] FROM [Products]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" SelectCommand="SELECT [Name], [URLToPhoto], [Price], [Description], [Id], [Producer] FROM [Products]"></asp:SqlDataSource>
 
     <asp:Label ID="LabelAddress" runat="server" Text="Label" Font-Size="X-Large"></asp:Label>
+    <br>
+    <asp:Label ID="LabelPrice" runat="server" Text="Label" Font-Size="X-Large"></asp:Label>
 </asp:Content>

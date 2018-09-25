@@ -2,11 +2,6 @@
 
 namespace BikeStore.Models
 {
-    public enum ProductType
-    {
-        bicycle, part, clothing
-    }
-        
     public class Product
     {
         [Key]
@@ -26,10 +21,6 @@ namespace BikeStore.Models
         public decimal Price { get; set; }
 
         [Display(Name = "Opis")]
-        public string Description { get; set; }
-
-
-        [Display(Name = "Typ produktu")]
-        public ProductType ProductType { get; set; }
+        public string Description { get; set; }        
     }
 }

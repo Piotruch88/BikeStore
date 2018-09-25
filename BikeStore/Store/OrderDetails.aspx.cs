@@ -1,4 +1,6 @@
-﻿using BikeStore.Models;
+﻿using BikeStore.Menage;
+using BikeStore.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Linq;
 using System.Web.UI.WebControls;
@@ -13,11 +15,18 @@ namespace BikeStore.Store
         {
             Label.Text = "Szczegóły zamówienia";
 
+            var msg = Request.QueryString["msg"];
+
+            if (String.IsNullOrEmpty(msg) == false)
+            {
+                Label.Text = msg;
+            }
+
             var guid = Request.QueryString["orderGuid"];
                       
             if (String.IsNullOrEmpty(guid) == false)
             {
-                var sqlCommand = "Select distinct p.Id, p.Name, p.Price, p.Description, p.Producer, p.ProductType, p.URLToPhoto" + Environment.NewLine +
+                var sqlCommand = "Select distinct p.Id, p.Name, p.Price, p.Description, p.Producer, p.URLToPhoto" + Environment.NewLine +
                  "from dbo.ProductOrders po" + Environment.NewLine +
                  "join dbo.Orders o on o.Guid = po.OrderGuid" + Environment.NewLine +
                  "join dbo.Products p on p.Id = po.ProductId" + Environment.NewLine +
@@ -29,6 +38,9 @@ namespace BikeStore.Store
                              select o).Where(o => o.Guid.ToString() == guid).FirstOrDefault();
 
                 LabelAddress.Text = String.Format("Adres Twojego zamówienia: {0}", order.Addres);
+
+                
+                LabelPrice.Text = "Wartość Twojego zamówienia wynosi: " + order.Price;
             }
         }
     }

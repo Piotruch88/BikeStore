@@ -33,20 +33,19 @@ namespace BikeStore.Store
         protected void Btn_SubmitOrder_Click(object sender, EventArgs e)
         {
             var guid = Guid.NewGuid();
-            
+            var basket = new ShoppingBasket(Session, User.Identity.GetUserId());
+
             var order = new Order
             {
                 Addres = ASPxMemo1.Text,
                 TimeCreate = DateTime.Now,
                 UserIdPlacing = User.Identity.GetUserId(),
-                Guid = guid
+                Price = basket.GetTotalCost(),
+                Guid = guid,
             };
             _db.Orders.Add(order);
 
-
-            var basket = new ShoppingBasket(Session, User.Identity.GetUserId());
             var productsInBasket = basket.GetProductList();
-
 
             foreach (var product in productsInBasket)
             {
@@ -58,11 +57,13 @@ namespace BikeStore.Store
                     });
             }
 
-
             basket.Clear();
             _db.SaveChanges();
+            
+            var msg = "Dzięujemy za złożenie zamówienia";
+            var urlRedirect = String.Format("/Store/OrderDetails.aspx?orderGuid={0}&msg={1}", guid, msg);
 
-            Response.Write("<script>alert('Dzięujemy za złożenie zamówienia. Twoje zadanie ląduje do realizacji')</script>");
+            Response.Redirect(urlRedirect);
         }
     }
 }

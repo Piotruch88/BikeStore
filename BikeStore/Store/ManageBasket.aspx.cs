@@ -21,6 +21,9 @@ namespace BikeStore.Store
         protected void Page_Load(object sender, EventArgs e)
         {
             CheckUserPermission();
+            
+            var basket = new ShoppingBasket(Session, User.Identity.GetUserId());
+            LabelPrice.Text = "Łączy koszt: " + basket.GetTotalCost();
         }
 
         public List<Product> GetBasket()
