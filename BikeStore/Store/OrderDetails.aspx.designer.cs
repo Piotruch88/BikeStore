@@ -40,21 +40,21 @@ namespace BikeStore.Store {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// LabelAddress control.
+        /// LabelOrderAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelAddress;
+        protected global::System.Web.UI.WebControls.Label LabelOrderAddress;
         
         /// <summary>
-        /// LabelPrice control.
+        /// LabelOrderPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPrice;
+        protected global::System.Web.UI.WebControls.Label LabelOrderPrice;
     }
 }

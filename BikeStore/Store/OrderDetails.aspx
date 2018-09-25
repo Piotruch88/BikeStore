@@ -27,7 +27,7 @@
     </dx:ASPxGridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" SelectCommand="SELECT [Name], [URLToPhoto], [Price], [Description], [Id], [Producer] FROM [Products]"></asp:SqlDataSource>
 
-    <asp:Label ID="LabelAddress" runat="server" Text="Label" Font-Size="X-Large"></asp:Label>
+    <asp:Label ID="LabelOrderAddress" runat="server" Text="Label" Font-Size="X-Large"></asp:Label>
     <br>
-    <asp:Label ID="LabelPrice" runat="server" Text="Label" Font-Size="X-Large"></asp:Label>
+    <asp:Label ID="LabelOrderPrice" runat="server" Text="Label" Font-Size="X-Large"></asp:Label>
 </asp:Content>
