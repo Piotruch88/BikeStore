@@ -169,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Store\NoPermission.aspx" />
+    <Content Include="Store\OrderDetails.aspx" />
     <Content Include="Store\Orders.aspx" />
     <Content Include="Store\OrderSummary.aspx" />
     <Content Include="Store\Products.aspx" />
@@ -364,6 +365,13 @@
     </Compile>
     <Compile Include="Store\NoPermission.aspx.designer.cs">
       <DependentUpon>NoPermission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Store\OrderDetails.aspx.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Store\OrderDetails.aspx.designer.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Store\Orders.aspx.cs">
       <DependentUpon>Orders.aspx</DependentUpon>

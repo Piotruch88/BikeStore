@@ -1,9 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="Orders.aspx.cs" Inherits="BikeStore.Store.Orders" %>
 
 
-
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
     <dx:ASPxGridView ID="ASPxGridView" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource" KeyFieldName="Id" OnCustomButtonCallback="ASPxGridView1_CustomButtonCallback">
         <SettingsAdaptivity>
             <AdaptiveDetailLayoutProperties ColCount="1"></AdaptiveDetailLayoutProperties>
@@ -20,7 +18,7 @@
             </dx:GridViewDataTextColumn>
             <dx:GridViewCommandColumn VisibleIndex="3">
                 <CustomButtons>
-                    <dx:GridViewCommandColumnCustomButton Text="Wybierz">
+                    <dx:GridViewCommandColumnCustomButton Text="Pokaż szczegóły zmówienia">
                     </dx:GridViewCommandColumnCustomButton>
                 </CustomButtons>
             </dx:GridViewCommandColumn>
