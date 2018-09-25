@@ -28,4 +28,6 @@
         </Columns>
     </dx:ASPxGridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" SelectCommand="SELECT [Name], [URLToPhoto], [Price], [Description], [ProductType], [Id], [Producer] FROM [Products]"></asp:SqlDataSource>
+
+    <asp:Label ID="LabelAddress" runat="server" Text="Label" Font-Size="X-Large"></asp:Label>
 </asp:Content>
