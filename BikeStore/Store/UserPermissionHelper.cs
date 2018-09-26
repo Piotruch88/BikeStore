@@ -9,30 +9,14 @@ namespace BikeStore.Store
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
         private ApplicationUser _user;
-        public bool UserIsLogged { get { return CheckUserIsLogged(); } }
-        public bool UserHasAdminMode { get { return CheckUserHasAdminMode(); } }
+        public bool UserIsLogged { get { return _user != null; } }
+        public bool UserHasAdminMode { get { return _user != null && _user.AdminMode == true; } }
 
 
         public UserPermissionHelper(IIdentity Identity)
         {
             var userId = Identity.GetUserId();
             _user = _db.Users.FirstOrDefault(x => x.Id == userId);
-        }
-
-        private bool CheckUserIsLogged()
-        {
-            bool result = false;
-
-            if (_user != null)
-                result = true;
-
-            return result;
-        }
-
-
-        private bool CheckUserHasAdminMode()
-        {
-            return CheckUserIsLogged() && _user.AdminMode == true;
         }
     }
 }
